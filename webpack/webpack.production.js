@@ -6,6 +6,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.name': JSON.stringify('foobar'),
+      'process.env.city': JSON.stringify('tokyo'),
     })
   ]
 }

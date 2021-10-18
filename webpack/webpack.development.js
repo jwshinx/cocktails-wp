@@ -11,6 +11,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.name': JSON.stringify('joel'),
+      'process.env.city': JSON.stringify('rome'),
     }),
     new ReactRefreshWebpackPlugin(),
   ]
