@@ -1,3 +1,28 @@
 h1 {
   color: green;
 }
+
+h3 {
+  color: #aacccc;
+}
+.App {
+  background-color: pink;
+  color: green;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.row .content {
+  height: 550px;
+}
+
+.sidenav {
+  background-color: #aacccc;
+  height: 100%;
+}
+
+.counter {
+  border: 1px red solid;
+}
