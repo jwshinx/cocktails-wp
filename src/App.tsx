@@ -1,38 +1,49 @@
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+
 import './styles.css'
 import IMAGE from './gsw.png'
 import LOGO from './logo.svg'
+
+import Segment from './components/segment/Segment'
 import { Counter } from './components/Counter'
 import Footer from './components/Footer'
+import {
+  SegmentType,
+  SegmentKeyType,
+  FirstLetterSegmentKey,
+} from './models/cocktail'
 
 export const App = () => {
+  const [segmentType, setSegmentType] = useState<SegmentType>('search')
+  const [segmentKey, setSegmentKey] = useState<SegmentKeyType>(
+    FirstLetterSegmentKey
+  )
+  const [segmentValue, setSegmentValue] = useState('c')
+
   return (
     <Router>
       <div className="container">
         <div className="row">
-          <div className="col-3 sidenav">
-            <h2>Logo</h2>
-            <nav>
-              <ul className="list-group">
-                <li className="list-group-item">
-                  <Link to="/">Home</Link>
-                </li>
-                <li className="list-group-item">
-                  <Link to="/age">Age</Link>
-                </li>
-                <li className="list-group-item">
-                  <Link to="/gender">Gender</Link>
-                </li>
-                <li className="list-group-item">
-                  <Link to="/geo">Geo</Link>
-                </li>
-              </ul>
-            </nav>
+          <div className="col-4 sidenav">
+            <div className="row mt-4">
+              <h2>Cocktails</h2>
+            </div>
+            <div className="row">
+              <Segment
+                segmentType={segmentType}
+                segmentKey={segmentKey}
+                segmentValue={segmentValue}
+                onSegmentTypeChange={setSegmentType}
+                onSegmentKeyChange={setSegmentKey}
+                onSegmentValueChange={setSegmentValue}
+              />
+            </div>
           </div>
 
-          <div className="col-9">
+          <div className="col-8">
             <div className="row mt-3 mb-3">
               <h3>
                 {process.env.NODE_ENV} {process.env.name} {process.env.city}{' '}
