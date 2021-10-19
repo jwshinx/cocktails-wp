@@ -2,7 +2,15 @@ import React from 'react'
 
 import SegmentTypeSelector from '../segment-type-selector/SegmentTypeSelector'
 import SegmentKeySelector from '../segment-key-selector/SegmentKeySelector'
-import { SegmentKeyType, SegmentType } from '../../models/cocktail'
+import SegmentValueInput from '../segment-value-input/SegmentValueInput'
+import SegmentValueSelector from '../segment-value-selector/SegmentValueSelector'
+import {
+  SegmentKeyType,
+  SegmentType,
+  AlcoholicFilterOptions,
+  CategoryFilterOptions,
+  GlassFilterOptions,
+} from '../../models/cocktail'
 
 interface SegmentProps {
   segmentType: string
@@ -16,11 +24,43 @@ interface SegmentProps {
 export default function Segment(props: SegmentProps): JSX.Element {
   const {
     segmentType,
+    segmentKey,
     segmentValue,
     onSegmentTypeChange,
     onSegmentKeyChange,
     onSegmentValueChange,
   } = props
+
+  const renderKeyValueInputArea = () => {
+    if (segmentType === 'search' || segmentKey.name === 'ingredient') {
+      return <SegmentValueInput onSegmentValueChange={onSegmentValueChange} />
+    }
+
+    if (segmentKey.name === 'alcoholic') {
+      return (
+        <SegmentValueSelector
+          onSegmentValueChange={onSegmentValueChange}
+          items={AlcoholicFilterOptions}
+        />
+      )
+    } else if (segmentKey.name === 'category') {
+      return (
+        <SegmentValueSelector
+          onSegmentValueChange={onSegmentValueChange}
+          items={CategoryFilterOptions}
+        />
+      )
+    } else if (segmentKey.name === 'glass') {
+      return (
+        <SegmentValueSelector
+          onSegmentValueChange={onSegmentValueChange}
+          items={GlassFilterOptions}
+        />
+      )
+    } else {
+      return <></>
+    }
+  }
 
   return (
     <div className="segment">
@@ -37,7 +77,7 @@ export default function Segment(props: SegmentProps): JSX.Element {
         onSegmentValueChange={onSegmentValueChange}
       />
 
-      {/* {renderKeyValueInputArea()} */}
+      {renderKeyValueInputArea()}
     </div>
   )
 }
