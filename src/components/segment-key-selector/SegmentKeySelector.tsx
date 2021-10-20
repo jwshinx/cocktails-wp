@@ -59,7 +59,7 @@ const SegmentKeySelector = (props: SegmentKeySelectorProps): JSX.Element => {
         className="form-select mb-3"
         id="segment-key"
         // onChange={(event) => onSelectChange(event.target.value as keyof T)}
-        onBlur={(event) => {
+        onChange={(event) => {
           onSelectChange(event.target.value)
         }}
       >

@@ -19,7 +19,7 @@ export default function SegmentValueSelector({
       <select
         className="form-select mb-3"
         id="segment-value"
-        onBlur={(event) => onValueSelectorChange(event)}
+        onChange={(event) => onValueSelectorChange(event)}
       >
         <SegmentValueSelectorOptions items={items} />
       </select>

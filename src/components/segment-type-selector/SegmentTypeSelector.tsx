@@ -41,7 +41,7 @@ const SegmentTypeSelector = (props: SegmentTypeSelectorProps): JSX.Element => {
         className="form-select mb-3"
         id="sorter"
         // onChange={(event) => onSelectChange(event.target.value as keyof T)}
-        onBlur={(event) => onSelectChange(event.target.value)}
+        onChange={(event) => onSelectChange(event.target.value)}
       >
         {['search', 'filter'].map((segmentType): JSX.Element => {
           return (
