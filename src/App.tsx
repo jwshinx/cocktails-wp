@@ -13,13 +13,15 @@ import Segment from './components/segment/Segment'
 import { Counter } from './components/Counter'
 import Footer from './components/Footer'
 import { SearchInput } from './components/ui/SearchInput'
+import Sorter from './components/ui/Sorter'
+import Filterer from './components/ui/Filterer'
 import {
   GeneralDrink,
   SegmentType,
   SegmentKeyType,
   FirstLetterSegmentKey,
-  // PropertyType,
-  // CocktailFilter,
+  PropertyType,
+  CocktailFilter,
   // DetailDrink,
   ApiRawCocktailData,
 } from './models/cocktail'
@@ -32,8 +34,13 @@ export const App = () => {
     FirstLetterSegmentKey
   )
   const [segmentValue, setSegmentValue] = useState('c')
-  // const [sortProperty, setSortProperty] = useState<PropertyType<GeneralDrink>>({ property: 'strDrink', isDescending: false });
-  // const [filterProperties, setFilterProperties] = useState<Array<CocktailFilter<GeneralDrink>>>([]);
+  const [sortProperty, setSortProperty] = useState<PropertyType<GeneralDrink>>({
+    property: 'strDrink',
+    isDescending: false,
+  })
+  const [filterProperties, setFilterProperties] = useState<
+    Array<CocktailFilter<GeneralDrink>>
+  >([])
 
   useEffect(() => {
     const search = async () => {
@@ -62,30 +69,39 @@ export const App = () => {
 
   console.log(`+++> dataResult:`, dataResult)
   console.log(`+++> query:`, query)
+  console.log(`+++> sortProperty:`, sortProperty)
 
-  // const onCocktailFilterChange = (propertyType: CocktailFilter<GeneralDrink>): void => {
-  //   const propertyOnlyMatch = filterProperties.some((filterProperty) => {
-  //     return filterProperty.property === propertyType.property;
-  //   });
+  const onCocktailFilterChange = (
+    propertyType: CocktailFilter<GeneralDrink>
+  ): void => {
+    const propertyOnlyMatch = filterProperties.some((filterProperty) => {
+      return filterProperty.property === propertyType.property
+    })
 
-  //   const fullMatch = filterProperties.some((filterProperty) => {
-  //     return filterProperty.property === propertyType.property
-  //       && filterProperty.isTruthySelected === propertyType.isTruthySelected
-  //   });
+    const fullMatch = filterProperties.some((filterProperty) => {
+      return (
+        filterProperty.property === propertyType.property &&
+        filterProperty.isTruthySelected === propertyType.isTruthySelected
+      )
+    })
 
-  //   if (fullMatch) {
-  //     setFilterProperties(
-  //       filterProperties.filter((filterProperty) => filterProperty.property !== propertyType.property)
-  //     );
-  //   } else if (propertyOnlyMatch) {
-  //     setFilterProperties([
-  //       ...filterProperties.filter((filterProperty) => filterProperty.property !== propertyType.property),
-  //       propertyType
-  //     ]);
-  //   } else {
-  //     setFilterProperties([...filterProperties, propertyType]);
-  //   }
-  // }
+    if (fullMatch) {
+      setFilterProperties(
+        filterProperties.filter(
+          (filterProperty) => filterProperty.property !== propertyType.property
+        )
+      )
+    } else if (propertyOnlyMatch) {
+      setFilterProperties([
+        ...filterProperties.filter(
+          (filterProperty) => filterProperty.property !== propertyType.property
+        ),
+        propertyType,
+      ])
+    } else {
+      setFilterProperties([...filterProperties, propertyType])
+    }
+  }
 
   return (
     <Router>
@@ -117,6 +133,19 @@ export const App = () => {
                   }}
                 />
               )}
+            </div>
+            <div className="row mt-3">
+              <Sorter
+                objects={dataResult}
+                onSortPropertyClick={setSortProperty}
+              />
+            </div>
+            <div className="row">
+              <Filterer
+                objects={dataResult}
+                properties={filterProperties}
+                onFilterChange={onCocktailFilterChange}
+              />
             </div>
           </div>
 
