@@ -345,3 +345,7 @@ export interface DetailDrink extends GeneralDrink {
   strTags: string | null // "IBA,Classic",
   strVideo: string | null // "https://www.youtube.com/watch?v=347ZY5eJFU8",
 }
+
+export interface ApiRawCocktailData {
+  drinks: Array<DetailDrink>
+}
