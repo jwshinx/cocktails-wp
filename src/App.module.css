@@ -1,0 +1,22 @@
+.App {
+  background-color: pink;
+  color: green;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.listarea {
+  height: 90vh;
+  overflow: auto;
+}
+
+.sidenav {
+  height: 90vh;
+  overflow: auto;
+}
+
+.row .content {
+  height: 550px;
+}

@@ -1,37 +1,3 @@
-h1 {
-  color: green;
-}
-
-h3 {
-  color: #aacccc;
-}
-.App {
-  background-color: pink;
-  color: green;
-}
-
-.orange {
-  background-color: orange;
-}
-
-.row .content {
-  height: 550px;
-}
-
-.sidenav {
-  background-color: #aacccc;
-  height: 100%;
-}
-
-.counter {
-  border: 1px red solid;
-}
-
-.listarea {
-  height: 90vh;
-  overflow: auto;
-}
-
 .detail-item {
   /* background-color: #f0f0f0; */
   /* display: flex;

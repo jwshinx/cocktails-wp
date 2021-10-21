@@ -1,5 +1,7 @@
 import React from 'react'
 
+import styles from './Segment.module.css'
+
 import SegmentTypeSelector from '../segment-type-selector/SegmentTypeSelector'
 import SegmentKeySelector from '../segment-key-selector/SegmentKeySelector'
 import SegmentValueInput from '../segment-value-input/SegmentValueInput'
@@ -63,7 +65,7 @@ export default function Segment(props: SegmentProps): JSX.Element {
   }
 
   return (
-    <div className="segment">
+    <div className={styles.segment}>
       <SegmentTypeSelector
         onSegmentKeyChange={onSegmentKeyChange}
         onSegmentTypeChange={onSegmentTypeChange}

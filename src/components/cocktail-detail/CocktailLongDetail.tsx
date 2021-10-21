@@ -1,5 +1,7 @@
 import React from 'react'
 
+import styles from './CocktailLongDetail.module.css'
+
 import { DetailDrink } from '../../models/cocktail'
 import CocktailLongDetailInstructions from './CocktailLongDetailInstructions'
 import CocktailLongDetailIngredients from './CocktailLongDetailIngredients'
@@ -11,7 +13,7 @@ export default function CocktailLongDetail({
   item: DetailDrink
 }): JSX.Element {
   return (
-    <div className="container card mb-3 pt-2 pb-2 detail-item">
+    <div className={`container card mb-3 pt-2 pb-2 ${styles['detail-item']}`}>
       <div className="col-12">
         <div className="row">
           <div className="card-header pt-2">
@@ -22,7 +24,7 @@ export default function CocktailLongDetail({
             <CocktailDifficulty item={item} />
           </div>
         </div>
-        <div className="row description">
+        <div className={`row ${styles.description}`}>
           <span>ID: {item.idDrink}</span>
           <span>IBA: {item.strIBA}</span>
           <span>Tags: {item.strTags}</span>

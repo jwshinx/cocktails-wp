@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import _ from 'lodash'
 
-import './styles.css'
+import styles from './App.module.css'
 // import IMAGE from './gsw.png'
 // import LOGO from './logo.svg'
 
@@ -70,7 +70,6 @@ export const App = () => {
 
   console.log(`+++> dataResult:`, dataResult)
   console.log(`+++> query:`, query)
-  console.log(`+++> sortProperty:`, sortProperty)
 
   const onCocktailFilterChange = (
     propertyType: CocktailFilter<GeneralDrink>
@@ -108,7 +107,7 @@ export const App = () => {
     <Router>
       <div className="container">
         <div className="row">
-          <div className="col-4 sidenav">
+          <div className={`col-4 ${styles.sidenav}`}>
             <div className="row mt-4">
               <h2>Cocktails</h2>
             </div>
@@ -150,7 +149,7 @@ export const App = () => {
             </div>
           </div>
 
-          <div className="col-8 listarea">
+          <div className={`col-8 ${styles.listarea}`}>
             <div className="row mt-3 mb-3">
               <Switch>
                 <Route path="/">

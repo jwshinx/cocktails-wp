@@ -17,15 +17,7 @@ const isDigits = function (str: any): boolean {
 
 export default function genericSort<T>(a: T, b: T, p: PropertyType<T>): number {
   const { property, isDescending } = p
-  console.log(
-    '+++> gs 0.1 ' + ' ' + property + ' ' + isDescending + ' <+++++++++++++'
-  )
-  console.log('+++> gs a[property]:', a[property])
-  console.log('+++> gs b[property]:', b[property])
 
-  // const xx = "dfd"
-  // const yy =  a[property]
-  // console.log(`yy`, yy)
   const aNoComma = replaceComma(a[property])
   const bNoComma = replaceComma(b[property])
 
