@@ -1,6 +1,6 @@
-# react-template
+# cocktail-wp
 
-Bare starter project from scratch. No create-react-app. React, typescript, webpack, babel. Includes linter and prettier baked in.
+Cocktail + Webpack. No create-react-app. React, typescript, webpack, babel. Includes linter and prettier baked in. Bootstrap too.
 
 ## Setup
 
@@ -19,3 +19,4 @@ Build `bundle.js` for deployment. Test it locally. Build in root, and start in `
 - yarn build
 - cd build
 - npx serve
+- http://localhost:5000/
