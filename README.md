@@ -20,3 +20,7 @@ Build `bundle.js` for deployment. Test it locally. Build in root, and start in `
 - cd build
 - npx serve
 - http://localhost:5000/
+
+## Tests
+
+After `yarn install`, simply run `yarn test`
