@@ -6,6 +6,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
+import renderer from 'react-test-renderer'
+
 import Title from '../Title'
 
 it('renders without crashing', () => {
@@ -16,4 +18,14 @@ it('renders without crashing', () => {
 it('renders title properly', () => {
   const { getByTestId } = render(<Title text="Foobar"></Title>)
   expect(getByTestId('title')).toHaveTextContent('Foobar')
+})
+
+it('renders title properly', () => {
+  const { getByTestId } = render(<Title text="Cocktails"></Title>)
+  expect(getByTestId('title')).toHaveTextContent('Cocktails')
+})
+
+it('renders correctly', () => {
+  const tree = renderer.create(<Title text="Cocktails"></Title>).toJSON()
+  expect(tree).toMatchSnapshot()
 })
