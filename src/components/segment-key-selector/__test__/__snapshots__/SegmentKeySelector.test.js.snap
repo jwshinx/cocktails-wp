@@ -27,31 +27,3 @@ exports[`should snapshot SegmentKeySelector 1`] = `
   </select>
 </div>
 `;
-
-exports[`should snapshot SegmentKeySelectorOptions 1`] = `
-<div
-  className="form-group"
->
-  <label
-    htmlFor="segment-key"
-  >
-    Enter category of search
-  </label>
-  <select
-    className="form-select mb-3"
-    id="segment-key"
-    onChange={[Function]}
-  >
-    <option
-      value="firstLetter"
-    >
-      First Letter
-    </option>
-    <option
-      value="cocktailName"
-    >
-      Cocktail Name
-    </option>
-  </select>
-</div>
-`;

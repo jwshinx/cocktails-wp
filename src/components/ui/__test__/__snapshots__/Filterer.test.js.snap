@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`when DetailDrink should snapshot DetailDrink Filterer 1`] = `
+<div
+  className="col-12"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="form-check col-6 ml-5 pl-5"
+      style={
+        Object {
+          "paddingLeft": "30px",
+        }
+      }
+    >
+      <input
+        checked={false}
+        className="form-check-input"
+        id="idDrink-true"
+        onChange={[Function]}
+        type="checkbox"
+        value="idDrink"
+      />
+      <label
+        className="form-check-label"
+        htmlFor="idDrink-true"
+      >
+        idDrink
+         truthy
+      </label>
+    </div>
+    <div
+      className="form-check col-6"
+    >
+      <input
+        checked={false}
+        className="form-check-input"
+        id="idDrink-false"
+        onChange={[Function]}
+        style={
+          Object {
+            "marginLeft": "3px",
+            "marginRight": "3px",
+          }
+        }
+        type="checkbox"
+        value="idDrink"
+      />
+      <label
+        className="form-check-label"
+        htmlFor="idDrink-false"
+      >
+        idDrink
+         falsy
+      </label>
+    </div>
+    <br />
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="form-check col-6 ml-5 pl-5"
+      style={
+        Object {
+          "paddingLeft": "30px",
+        }
+      }
+    >
+      <input
+        checked={false}
+        className="form-check-input"
+        id="strDrink-true"
+        onChange={[Function]}
+        type="checkbox"
+        value="strDrink"
+      />
+      <label
+        className="form-check-label"
+        htmlFor="strDrink-true"
+      >
+        strDrink
+         truthy
+      </label>
+    </div>
+    <div
+      className="form-check col-6"
+    >
+      <input
+        checked={false}
+        className="form-check-input"
+        id="strDrink-false"
+        onChange={[Function]}
+        style={
+          Object {
+            "marginLeft": "3px",
+            "marginRight": "3px",
+          }
+        }
+        type="checkbox"
+        value="strDrink"
+      />
+      <label
+        className="form-check-label"
+        htmlFor="strDrink-false"
+      >
+        strDrink
+         falsy
+      </label>
+    </div>
+    <br />
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="form-check col-6 ml-5 pl-5"
+      style={
+        Object {
+          "paddingLeft": "30px",
+        }
+      }
+    >
+      <input
+        checked={false}
+        className="form-check-input"
+        id="strIngredient1-true"
+        onChange={[Function]}
+        type="checkbox"
+        value="strIngredient1"
+      />
+      <label
+        className="form-check-label"
+        htmlFor="strIngredient1-true"
+      >
+        strIngredient1
+         truthy
+      </label>
+    </div>
+    <div
+      className="form-check col-6"
+    >
+      <input
+        checked={false}
+        className="form-check-input"
+        id="strIngredient1-false"
+        onChange={[Function]}
+        style={
+          Object {
+            "marginLeft": "3px",
+            "marginRight": "3px",
+          }
+        }
+        type="checkbox"
+        value="strIngredient1"
+      />
+      <label
+        className="form-check-label"
+        htmlFor="strIngredient1-false"
+      >
+        strIngredient1
+         falsy
+      </label>
+    </div>
+    <br />
+  </div>
+</div>
+`;
+
+exports[`when GeneralDrink should snapshot GeneralDrink Filterer 1`] = `
+<div
+  className="col-12"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="form-check col-6 ml-5 pl-5"
+      style={
+        Object {
+          "paddingLeft": "30px",
+        }
+      }
+    >
+      <input
+        checked={false}
+        className="form-check-input"
+        id="idDrink-true"
+        onChange={[Function]}
+        type="checkbox"
+        value="idDrink"
+      />
+      <label
+        className="form-check-label"
+        htmlFor="idDrink-true"
+      >
+        idDrink
+         truthy
+      </label>
+    </div>
+    <div
+      className="form-check col-6"
+    >
+      <input
+        checked={false}
+        className="form-check-input"
+        id="idDrink-false"
+        onChange={[Function]}
+        style={
+          Object {
+            "marginLeft": "3px",
+            "marginRight": "3px",
+          }
+        }
+        type="checkbox"
+        value="idDrink"
+      />
+      <label
+        className="form-check-label"
+        htmlFor="idDrink-false"
+      >
+        idDrink
+         falsy
+      </label>
+    </div>
+    <br />
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="form-check col-6 ml-5 pl-5"
+      style={
+        Object {
+          "paddingLeft": "30px",
+        }
+      }
+    >
+      <input
+        checked={false}
+        className="form-check-input"
+        id="strDrink-true"
+        onChange={[Function]}
+        type="checkbox"
+        value="strDrink"
+      />
+      <label
+        className="form-check-label"
+        htmlFor="strDrink-true"
+      >
+        strDrink
+         truthy
+      </label>
+    </div>
+    <div
+      className="form-check col-6"
+    >
+      <input
+        checked={false}
+        className="form-check-input"
+        id="strDrink-false"
+        onChange={[Function]}
+        style={
+          Object {
+            "marginLeft": "3px",
+            "marginRight": "3px",
+          }
+        }
+        type="checkbox"
+        value="strDrink"
+      />
+      <label
+        className="form-check-label"
+        htmlFor="strDrink-false"
+      >
+        strDrink
+         falsy
+      </label>
+    </div>
+    <br />
+  </div>
+</div>
+`;
