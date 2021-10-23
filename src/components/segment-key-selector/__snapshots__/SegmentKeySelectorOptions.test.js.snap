@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should snapshot SegmentKeySelectorOptions 1`] = `
+Array [
+  <option
+    value="firstLetter"
+  >
+    First Letter
+  </option>,
+  <option
+    value="cocktailName"
+  >
+    Cocktail Name
+  </option>,
+]
+`;
+
+exports[`should snapshot render Cocktails 1`] = `
+Array [
+  <option
+    value="firstLetter"
+  >
+    First Letter
+  </option>,
+  <option
+    value="cocktailName"
+  >
+    Cocktail Name
+  </option>,
+]
+`;

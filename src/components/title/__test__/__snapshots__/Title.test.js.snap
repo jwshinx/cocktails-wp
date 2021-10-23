@@ -11,3 +11,15 @@ exports[`renders correctly 1`] = `
   </h2>
 </div>
 `;
+
+exports[`should snapshot render Cocktails 1`] = `
+<div
+  className="title"
+>
+  <h2
+    data-testid="title"
+  >
+    Cocktails
+  </h2>
+</div>
+`;

@@ -25,7 +25,7 @@ it('renders title properly', () => {
   expect(getByTestId('title')).toHaveTextContent('Cocktails')
 })
 
-it('renders correctly', () => {
+it('should snapshot render Cocktails', () => {
   const tree = renderer.create(<Title text="Cocktails"></Title>).toJSON()
   expect(tree).toMatchSnapshot()
 })
