@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should snapshot SearchInput 1`] = `
+<div
+  className="form-group"
+>
+  <input
+    className="form-control"
+    id="search"
+    onChange={[Function]}
+    placeholder="Enter a value"
+    type="search"
+  />
+  <small
+    className="form-text text-muted"
+    id="emailHelp"
+  />
+</div>
+`;
