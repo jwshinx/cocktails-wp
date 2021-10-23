@@ -9,21 +9,27 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import renderer from 'react-test-renderer'
 
-import SegmentKeySelector from '../SegmentKeySelector'
+import SegmentTypeSelector from '../SegmentTypeSelector'
 
 it('should render label "Enter category of search"', () => {
-  render(<SegmentKeySelector />)
-  const elem = screen.getByText(/Enter category of search/)
+  render(<SegmentTypeSelector />)
+  const elem = screen.getByText(/Enter type of search/)
   expect(elem).toBeInTheDocument()
 })
 
 it('should render combobox', () => {
-  render(<SegmentKeySelector />)
+  render(<SegmentTypeSelector />)
   const elem = screen.getByRole('combobox')
   expect(elem).toBeInTheDocument()
 })
 
-it('should snapshot SegmentKeySelector', () => {
-  const tree = renderer.create(<SegmentKeySelector />).toJSON()
+it('should render options "filter" and "search"', () => {
+  render(<SegmentTypeSelector />)
+  expect(screen.getAllByRole('option', { name: 'search' })).toBeTruthy()
+  expect(screen.getAllByRole('option', { name: 'filter' })).toBeTruthy()
+})
+
+it('should snapshot SegmentTypeSelector', () => {
+  const tree = renderer.create(<SegmentTypeSelector />).toJSON()
   expect(tree).toMatchSnapshot()
 })

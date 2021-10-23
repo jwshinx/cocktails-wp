@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should snapshot SegmentTypeSelector 1`] = `
+<div
+  className="form-group"
+>
+  <label
+    htmlFor="sorter"
+  >
+    Enter type of search
+  </label>
+  <select
+    className="form-select mb-3"
+    id="sorter"
+    onChange={[Function]}
+  >
+    <option
+      value="search"
+    >
+      search
+    </option>
+    <option
+      value="filter"
+    >
+      filter
+    </option>
+  </select>
+</div>
+`;
