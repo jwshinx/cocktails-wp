@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should snapshot SegmentValueSelector 1`] = `
+<div
+  className="form-group"
+>
+  <label
+    htmlFor="segment-value"
+  >
+    SegmentValueSelector
+  </label>
+  <select
+    className="form-select mb-3"
+    id="segment-value"
+    onChange={[Function]}
+  >
+    <option
+      value="alcoholic"
+    >
+      Alcoholic
+    </option>
+    <option
+      value="non_alcoholic"
+    >
+      Non Alcoholic
+    </option>
+    <option
+      value="optional_alcohol"
+    >
+      Optional Alcohol
+    </option>
+  </select>
+</div>
+`;
