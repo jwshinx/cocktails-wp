@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should snapshot Sorter 1`] = `
+<div
+  className="form-group"
+>
+  <select
+    className="form-select mb-3"
+    id="sorter"
+    onChange={[Function]}
+  >
+    <option
+      value="idDrink-true"
+    >
+      Sort by 
+      idDrink
+       descending
+    </option>
+    <option
+      value="idDrink-false"
+    >
+      Sort by 
+      idDrink
+       ascending
+    </option>
+    <option
+      value="strDrink-true"
+    >
+      Sort by 
+      strDrink
+       descending
+    </option>
+    <option
+      value="strDrink-false"
+    >
+      Sort by 
+      strDrink
+       ascending
+    </option>
+    ;
+  </select>
+</div>
+`;
