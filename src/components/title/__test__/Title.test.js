@@ -5,7 +5,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { render } from '@testing-library/react'
-import 'jest-dom/extend-expect'
+import '@testing-library/jest-dom'
 import Title from '../Title'
 
 it('renders without crashing', () => {
