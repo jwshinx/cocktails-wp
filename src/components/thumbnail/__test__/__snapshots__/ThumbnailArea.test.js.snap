@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should snapshot ThumbnailArea 1`] = `
+<img
+  alt="Sidecar"
+  className="card-img-top"
+  src="http:some-url"
+/>
+`;
