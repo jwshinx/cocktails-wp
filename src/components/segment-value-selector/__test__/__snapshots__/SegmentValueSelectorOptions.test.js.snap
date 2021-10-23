@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should snapshot SegmentValueSelectorOptions 1`] = `
+Array [
+  <option
+    value="alcoholic"
+  >
+    Alcoholic
+  </option>,
+  <option
+    value="non_alcoholic"
+  >
+    Non Alcoholic
+  </option>,
+  <option
+    value="optional_alcohol"
+  >
+    Optional Alcohol
+  </option>,
+]
+`;
