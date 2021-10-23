@@ -8,8 +8,9 @@ import chaiDom from 'chai-dom'
 import ReactDOM from 'react-dom'
 // import userEvent from "@testing-library/user-event";
 import React from 'react'
+import renderer from 'react-test-renderer'
 
-import { App } from './App'
+import { App } from '../App'
 
 chai.use(chaiDom)
 // const { expect } = chai
@@ -25,4 +26,9 @@ it('renders without crashing', () => {
   const div = document.createElement('div')
   ReactDOM.render(<App />, div)
   ReactDOM.unmountComponentAtNode(div)
+})
+
+it('should xxx', () => {
+  const tree = renderer.create(<App />).toJSON()
+  expect(tree).toMatchSnapshot()
 })

@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should xxx 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-4 sidenav"
+    >
+      <div
+        className="row mt-4"
+      >
+        <div
+          className="title"
+        >
+          <h2
+            data-testid="title"
+          >
+            Cocktails
+          </h2>
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="segment"
+        >
+          <div
+            className="form-group"
+          >
+            <label
+              htmlFor="sorter"
+            >
+              Enter type of search
+            </label>
+            <select
+              className="form-select mb-3"
+              id="sorter"
+              onChange={[Function]}
+            >
+              <option
+                value="search"
+              >
+                search
+              </option>
+              <option
+                value="filter"
+              >
+                filter
+              </option>
+            </select>
+          </div>
+          <div
+            className="form-group"
+          >
+            <label
+              htmlFor="segment-key"
+            >
+              Enter category of search
+            </label>
+            <select
+              className="form-select mb-3"
+              id="segment-key"
+              onChange={[Function]}
+            >
+              <option
+                value="firstLetter"
+              >
+                First Letter
+              </option>
+              <option
+                value="cocktailName"
+              >
+                Cocktail Name
+              </option>
+            </select>
+          </div>
+          <div
+            className="row"
+          >
+            <span>
+              Enter value
+            </span>
+            <br />
+            <div
+              className="form-group"
+            >
+              <input
+                className="form-control"
+                id="search"
+                onChange={[Function]}
+                placeholder="(letter or cocktail name)"
+                type="search"
+              />
+              <small
+                className="form-text text-muted"
+                id="emailHelp"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="row mt-3"
+      />
+      <div
+        className="row mt-3"
+      />
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        />
+      </div>
+    </div>
+    <div
+      className="col-8 listarea"
+    >
+      <div
+        className="row mt-3 mb-3"
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            className="container"
+          >
+            <div
+              className=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
