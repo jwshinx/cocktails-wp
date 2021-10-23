@@ -8,6 +8,7 @@ import styles from './App.module.css'
 // import IMAGE from './gsw.png'
 // import LOGO from './logo.svg'
 
+import Title from './components/title/Title'
 import cocktails from './api/cocktails'
 import Segment from './components/segment/Segment'
 // import { Counter } from './components/Counter'
@@ -109,7 +110,7 @@ export const App = () => {
         <div className="row">
           <div className={`col-4 ${styles.sidenav}`}>
             <div className="row mt-4">
-              <h2>Cocktails</h2>
+              <Title text="Cocktxx" />
             </div>
             <div className="row">
               <Segment
