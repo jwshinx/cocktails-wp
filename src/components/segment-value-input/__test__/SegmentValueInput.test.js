@@ -2,18 +2,23 @@
  * @jest-environment jsdom
  */
 
-// import React from 'react'
-// import ReactDOM from 'react-dom'
-// import { render } from '@testing-library/react'
-// import { render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-// import renderer from 'react-test-renderer'
+import renderer from 'react-test-renderer'
 
-// import SegmentValueSelector from '../SegmentValueSelector'
-// import { AlcoholicFilterOptions } from '../../../models/cocktail'
+const mockFn = jest.fn(() => true)
 
-it('should render label "Enter category of search"', () => {
-  // render(<SegmentValueSelector items={AlcoholicFilterOptions} />)
-  // const elem = screen.getByText(/Enter Value of search/)
-  // expect(elem).toBeInTheDocument()
+import SegmentValueInput from '../SegmentValueInput'
+
+it('should render label "Enter value"', () => {
+  render(<SegmentValueInput onSegmentValueChange={mockFn} />)
+  const elem = screen.getByText(/Enter value/)
+  expect(elem).toBeInTheDocument()
+})
+
+it('should snapshot SegmentValueInput', () => {
+  const tree = renderer
+    .create(<SegmentValueInput onSegmentValueChange={mockFn} />)
+    .toJSON()
+  expect(tree).toMatchSnapshot()
 })

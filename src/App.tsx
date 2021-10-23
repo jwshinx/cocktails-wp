@@ -110,7 +110,7 @@ export const App = () => {
         <div className="row">
           <div className={`col-4 ${styles.sidenav}`}>
             <div className="row mt-4">
-              <Title text="Cocktxx" />
+              <Title text="Cocktails" />
             </div>
             <div className="row">
               <Segment

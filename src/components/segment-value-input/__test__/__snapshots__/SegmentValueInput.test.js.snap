@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should snapshot SegmentValueInput 1`] = `
+<div
+  className="row"
+>
+  <span>
+    Enter value
+  </span>
+  <br />
+  <div
+    className="form-group"
+  >
+    <input
+      className="form-control"
+      id="search"
+      onChange={[Function]}
+      placeholder="(letter or cocktail name)"
+      type="search"
+    />
+    <small
+      className="form-text text-muted"
+      id="emailHelp"
+    />
+  </div>
+</div>
+`;
