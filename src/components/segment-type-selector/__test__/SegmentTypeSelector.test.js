@@ -23,6 +23,12 @@ it('should render combobox', () => {
   expect(elem).toBeInTheDocument()
 })
 
+it('should render 2 options', () => {
+  render(<SegmentTypeSelector />)
+  const options = screen.getAllByRole('option')
+  expect(options.length).toBe(2)
+})
+
 it('should render options "filter" and "search"', () => {
   render(<SegmentTypeSelector />)
   expect(screen.getAllByRole('option', { name: 'search' })).toBeTruthy()
