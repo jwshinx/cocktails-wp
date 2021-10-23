@@ -8,7 +8,7 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import renderer from 'react-test-renderer'
 
-import SegmentKeySelectorOptions from './SegmentKeySelectorOptions'
+import SegmentKeySelectorOptions from '../SegmentKeySelectorOptions'
 
 const items = [
   { label: 'First Letter', name: 'firstLetter', value: 'f' },
