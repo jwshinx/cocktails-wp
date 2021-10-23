@@ -20,6 +20,7 @@ it('renders title properly', () => {
   expect(getByTestId('title')).toHaveTextContent('Foobar')
 })
 
+// use getByTestId as last resort, if you cannot with getByText, etc
 it('renders title properly', () => {
   const { getByTestId } = render(<Title text="Cocktails"></Title>)
   expect(getByTestId('title')).toHaveTextContent('Cocktails')
