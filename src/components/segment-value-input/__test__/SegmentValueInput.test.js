@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import renderer from 'react-test-renderer'
 
@@ -21,4 +21,13 @@ it('should snapshot SegmentValueInput', () => {
     .create(<SegmentValueInput onSegmentValueChange={mockFn} />)
     .toJSON()
   expect(tree).toMatchSnapshot()
+})
+
+describe('SegmentValueInput', () => {
+  it('should be able to type in input', () => {
+    render(<SegmentValueInput onSegmentValueChange={mockFn} />)
+    const elem = screen.getByPlaceholderText(/letter or cocktail name/)
+    fireEvent.change(elem, { target: { value: 'g' } })
+    expect(elem.value).toBe('g')
+  })
 })

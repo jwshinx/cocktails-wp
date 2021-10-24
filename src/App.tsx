@@ -69,8 +69,8 @@ export const App = () => {
     }
   }, [segmentValue, segmentType, segmentKey])
 
-  console.log(`+++> dataResult:`, dataResult)
-  console.log(`+++> query:`, query)
+  // console.log(`+++> dataResult:`, dataResult)
+  // console.log(`+++> query:`, query)
 
   const onCocktailFilterChange = (
     propertyType: CocktailFilter<GeneralDrink>
