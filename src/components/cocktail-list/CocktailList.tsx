@@ -40,10 +40,11 @@ const CocktailList = (props: CocktailListProps): JSX.Element => {
         )
         .filter((item) => genericFilter(item, filterProperties))
         .sort((a, b) => genericSort(a, b, sortProperty))
-        .map((item: GeneralDrink): JSX.Element => {
+        .map((item: GeneralDrink, idx: number): JSX.Element => {
           if (segmentType && segmentType === 'search') {
             return (
               <CocktailLongDetail
+                data-testid={`cocktail-detail-${idx}`}
                 key={item.idDrink}
                 item={item as DetailDrink}
               />
@@ -51,6 +52,7 @@ const CocktailList = (props: CocktailListProps): JSX.Element => {
           } else {
             return (
               <CocktailShortDetail
+                data-testid={`cocktail-detail-${idx}`}
                 segmentType={segmentType}
                 key={item.idDrink}
                 data={item}
