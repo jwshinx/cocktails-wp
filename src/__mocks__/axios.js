@@ -17,25 +17,25 @@
 // +++++++++++++++++++++++++++++++++++++++++++++++++
 // import axios from 'axios'
 
-const axios = {
-  get: jest.fn(() => {
-    console.log('+++> mock axios 1')
-    Promise.resolve({ data: {} })
-  }),
-  create: () => axios,
-  defaults: {
-    adapter: {},
-  },
-}
+// const axios = {
+//   get: jest.fn(() => {
+//     console.log('+++> mock axios 1')
+//     Promise.resolve({ data: {} })
+//   }),
+//   create: () => axios,
+//   defaults: {
+//     adapter: {},
+//   },
+// }
 
-export default axios
+// export default axios
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++
-// const axios = jest.requireActual('axios')
-// jest.unmock('axios')
+const axios = jest.requireActual('axios')
+jest.unmock('axios')
 
-// const MockAdapter = require('axios-mock-adapter')
-// const mockAxios = new MockAdapter(axios)
+const MockAdapter = require('axios-mock-adapter')
+const mockAxios = new MockAdapter(axios)
 
-// // nothing important seems to be overwritten
-// module.exports = _.assignIn(axios, mockAxios)
+// nothing important seems to be overwritten
+module.exports = _.assignIn(axios, mockAxios)
