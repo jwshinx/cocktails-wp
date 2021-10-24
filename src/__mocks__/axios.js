@@ -31,6 +31,8 @@
 // export default axios
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++
+import _ from 'lodash'
+
 const axios = jest.requireActual('axios')
 jest.unmock('axios')
 
@@ -39,3 +41,16 @@ const mockAxios = new MockAdapter(axios)
 
 // nothing important seems to be overwritten
 module.exports = _.assignIn(axios, mockAxios)
+
+// var mock = new MockAdapter(axios)
+// mock.onGet('/search.php?f=c').reply(200, {
+//   data: {
+//     drinks: [
+//       {
+//         idDrink: '123123',
+//         strDrink: 'Negroni',
+//         strIngredient1: 'gin',
+//       },
+//     ],
+//   },
+// })

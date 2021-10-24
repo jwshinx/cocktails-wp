@@ -48,7 +48,7 @@ export const App = () => {
     const search = async () => {
       try {
         const url = `/${segmentType}.php?${segmentKey.value}=${segmentValue}`
-        // console.log("+++> cocktails url:", url);
+        console.log('+++> cocktails url:', url)
         const { data }: { data: ApiRawCocktailData } = await cocktails.get(url)
         // console.log("+++> cocktails fetched data 6:", data);
 
