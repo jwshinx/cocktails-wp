@@ -36,10 +36,11 @@ const SegmentTypeSelector = (props: SegmentTypeSelectorProps): JSX.Element => {
 
   return (
     <div className="form-group">
-      <label htmlFor="sorter">Enter type of search</label>
+      <label htmlFor="type-selector">Enter type of search</label>
       <select
         className="form-select mb-3"
-        id="sorter"
+        id="type-selector"
+        title="type-selector"
         // onChange={(event) => onSelectChange(event.target.value as keyof T)}
         onChange={(event) => onSelectChange(event.target.value)}
       >

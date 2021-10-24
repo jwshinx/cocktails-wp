@@ -4,7 +4,7 @@
 
 import { render, screen } from '@testing-library/react'
 import ReactDOM from 'react-dom'
-// import userEvent from "@testing-library/user-event";
+import userEvent from '@testing-library/user-event'
 import React from 'react'
 import renderer from 'react-test-renderer'
 
@@ -32,5 +32,28 @@ describe('renders properly', () => {
 
     const searchElems = screen.getAllByRole('searchbox')
     expect(searchElems.length).toBe(1)
+  })
+})
+
+describe('when "filter" type clicked', () => {
+  it('should trigger render of value selector', () => {
+    const dom = render(<App />)
+
+    // initially, default "search" renders 2 comboboxes
+    const beforeDom = screen.getAllByRole('combobox')
+    expect(beforeDom.length).toBe(2)
+
+    // user selects "filter" type
+    userEvent.selectOptions(screen.getByTitle('type-selector'), [
+      screen.getByText('filter'),
+    ])
+    expect(screen.getByRole('option', { name: 'filter' }).selected).toBe(true)
+
+    // after "filter" selection, 3 comboboxes are displayed
+    const afterDom = screen.getAllByRole('combobox')
+    expect(afterDom.length).toBe(3)
+
+    // generate snapshot of new dom
+    expect(dom).toMatchSnapshot()
   })
 })

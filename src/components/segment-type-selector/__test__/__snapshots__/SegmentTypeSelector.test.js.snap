@@ -5,14 +5,15 @@ exports[`should snapshot SegmentTypeSelector 1`] = `
   className="form-group"
 >
   <label
-    htmlFor="sorter"
+    htmlFor="type-selector"
   >
     Enter type of search
   </label>
   <select
     className="form-select mb-3"
-    id="sorter"
+    id="type-selector"
     onChange={[Function]}
+    title="type-selector"
   >
     <option
       value="search"
