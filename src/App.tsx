@@ -50,7 +50,7 @@ export const App = () => {
         const url = `/${segmentType}.php?${segmentKey.value}=${segmentValue}`
         // console.log('+++> cocktails url 1:', url)
         const { data }: { data: ApiRawCocktailData } = await cocktails.get(url)
-        // console.log("+++> cocktails fetched data 6:", data);
+        // console.log('+++> cocktails fetched data 6:', data)
 
         setDataResult(data.drinks as Array<GeneralDrink>)
       } catch (error) {
