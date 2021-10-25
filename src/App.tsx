@@ -48,13 +48,11 @@ export const App = () => {
     const search = async () => {
       try {
         const url = `/${segmentType}.php?${segmentKey.value}=${segmentValue}`
-        console.log('+++> cocktails url 1:', url)
+        // console.log('+++> cocktails url 1:', url)
         const { data }: { data: ApiRawCocktailData } = await cocktails.get(url)
-        console.log('+++> cocktails 100a')
         // console.log("+++> cocktails fetched data 6:", data);
 
         setDataResult(data.drinks as Array<GeneralDrink>)
-        console.log('+++> cocktails 101')
       } catch (error) {
         console.log('+++> api error:', error)
       }
