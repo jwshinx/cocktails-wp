@@ -15,7 +15,7 @@ export default function SegmentValueSelector({
 
   return (
     <div className="form-group">
-      <label htmlFor="segment-value">SegmentValueSelector</label>
+      <label htmlFor="segment-value">Enter variety</label>
       <select
         className="form-select mb-3"
         id="segment-value"

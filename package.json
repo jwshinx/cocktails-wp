@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "yarn build && aws --profile cody s3 rm s3://joel-cocktail-wp/ --recursive && aws --profile cody s3 cp ./build s3://joel-cocktail-wp/ --recursive --acl public-read",
     "start": "webpack serve --config webpack/webpack.config.js --env env=development",
     "build": "webpack --config webpack/webpack.config.js --env env=production",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
