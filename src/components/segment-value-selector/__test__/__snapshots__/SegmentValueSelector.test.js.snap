@@ -7,7 +7,7 @@ exports[`should snapshot SegmentValueSelector 1`] = `
   <label
     htmlFor="segment-value"
   >
-    SegmentValueSelector
+    Enter variety
   </label>
   <select
     className="form-select mb-3"

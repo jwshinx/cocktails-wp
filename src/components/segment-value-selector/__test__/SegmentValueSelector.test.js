@@ -14,7 +14,7 @@ import { AlcoholicFilterOptions } from '../../../models/cocktail'
 
 it('should render label "SegmentValueSelector"', () => {
   render(<SegmentValueSelector items={AlcoholicFilterOptions} />)
-  const elem = screen.getByText(/SegmentValueSelector/)
+  const elem = screen.getByText(/Enter variety/)
   expect(elem).toBeInTheDocument()
 })
 
