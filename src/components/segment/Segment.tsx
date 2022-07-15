@@ -35,7 +35,13 @@ export default function Segment(props: SegmentProps): JSX.Element {
 
   const renderKeyValueInputArea = () => {
     if (segmentType === 'search' || segmentKey.name === 'ingredient') {
-      return <SegmentValueInput onSegmentValueChange={onSegmentValueChange} />
+      return (
+        <SegmentValueInput
+          segmentKey={segmentKey}
+          segmentType={segmentType}
+          onSegmentValueChange={onSegmentValueChange}
+        />
+      )
     }
 
     if (segmentKey.name === 'alcoholic') {

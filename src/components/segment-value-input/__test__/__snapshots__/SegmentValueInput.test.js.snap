@@ -15,7 +15,7 @@ exports[`should snapshot SegmentValueInput 1`] = `
       className="form-control"
       id="search"
       onChange={[Function]}
-      placeholder="(letter or cocktail name)"
+      placeholder="(eg: first letter 'g')"
       type="search"
     />
     <small

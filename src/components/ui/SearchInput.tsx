@@ -11,7 +11,6 @@ interface SearchInputProps {
 }
 
 export function SearchInput(props: SearchInputProps) {
-  // console.log("+++> SearchInput 0");
   const { setSearchQuery, placeholderText } = props
   const [query, setQuery] = useState<string>('')
   const debouncedQuery = useDebounce(query, 500)
