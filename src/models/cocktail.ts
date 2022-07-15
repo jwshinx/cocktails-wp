@@ -89,10 +89,6 @@ export const CocktailValue: OptionValueType = {
   label: 'Cocktail',
   value: 'Cocktail',
 }
-export const MilkFloatShakeValue: OptionValueType = {
-  label: 'Milk / Float / Shake',
-  value: 'Milk / Float / Shake',
-}
 export const OtherUnknownValue: OptionValueType = {
   label: 'Other / Unknown',
   value: 'Other/Unknown',
@@ -112,15 +108,10 @@ export const PunchPartyDrinkValue: OptionValueType = {
   value: 'Punch / Party Drink',
 }
 export const BeerValue: OptionValueType = { label: 'Beer', value: 'Beer' }
-export const SoftDrinkSodaValue: OptionValueType = {
-  label: 'Soft Drink / Soda',
-  value: 'Soft Drink / Soda',
-}
 
 export const CategoryFilterOptions = [
   OrdinaryDrinkValue,
   CocktailValue,
-  MilkFloatShakeValue,
   OtherUnknownValue,
   CocoaValue,
   ShotValue,
@@ -128,7 +119,6 @@ export const CategoryFilterOptions = [
   HomemadeLiquerValue,
   PunchPartyDrinkValue,
   BeerValue,
-  SoftDrinkSodaValue,
 ]
 
 export const HighballGlassValue: OptionValueType = {

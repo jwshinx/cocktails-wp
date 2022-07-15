@@ -3,14 +3,16 @@ import React from 'react'
 import { SearchInput } from '../ui/SearchInput'
 import { SegmentKeyType } from '../../models/cocktail'
 
-const SegmentValueInput = ({
-  onSegmentValueChange,
-  segmentKey,
-}: {
+interface SegmentValueInputProps {
   segmentType: string
   segmentKey: SegmentKeyType
   onSegmentValueChange: (value: string) => void
-}): JSX.Element => {
+}
+
+const SegmentValueInput = ({
+  onSegmentValueChange,
+  segmentKey,
+}: SegmentValueInputProps): JSX.Element => {
   const { name: segmentKeyName } = segmentKey
   const placeholderTxt = `${
     segmentKeyName === 'firstLetter' ? "(eg: first letter 'g')" : "(eg: 'gin')"
