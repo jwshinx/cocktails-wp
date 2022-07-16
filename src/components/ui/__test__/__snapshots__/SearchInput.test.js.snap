@@ -12,8 +12,10 @@ exports[`should snapshot SearchInput 1`] = `
     type="search"
   />
   <small
-    className="form-text text-muted"
-    id="emailHelp"
-  />
+    className="form-text d-none"
+    id="error"
+  >
+    Please enter single letter.
+  </small>
 </div>
 `;

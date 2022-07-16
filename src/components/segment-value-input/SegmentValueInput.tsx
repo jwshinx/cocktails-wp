@@ -10,6 +10,7 @@ interface SegmentValueInputProps {
 }
 
 const SegmentValueInput = ({
+  segmentType,
   onSegmentValueChange,
   segmentKey,
 }: SegmentValueInputProps): JSX.Element => {
@@ -23,6 +24,8 @@ const SegmentValueInput = ({
       <span>Enter value</span>
       <br />
       <SearchInput
+        segmentType={segmentType}
+        segmentKey={segmentKey}
         placeholderText={placeholderTxt}
         setSearchQuery={(query) => {
           onSegmentValueChange(query)
